@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ghzlmc.ml/"/>
-  <updated>2020-07-14T09:09:53.547Z</updated>
+  <updated>2020-07-14T10:39:22.485Z</updated>
   <id>https://www.ghzlmc.ml/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[工具] 代理检测工具-NANSFAN</title>
+    <link href="https://www.ghzlmc.ml/2020/07/14/%E5%B7%A5%E5%85%B7-%E4%BB%A3%E7%90%86%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7-NANSFAN/"/>
+    <id>https://www.ghzlmc.ml/2020/07/14/%E5%B7%A5%E5%85%B7-%E4%BB%A3%E7%90%86%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7-NANSFAN/</id>
+    <published>2020-07-14T10:32:56.000Z</published>
+    <updated>2020-07-14T10:39:22.485Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>这是一个代理检测工具，为什么我要发这个呢<br>因为它可以开启很多线程，速度快，支持类型全<br>50000代理开800线程10超时大约5分钟就好了<br>可以与上个帖子的代理爬取工具一起使用</p><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>这就不用我多说了，原理与其他软件几乎一样<br>只不过速度快了很多，有颜色区分好坏代理<br>支持AUTO模式自动识别代理类型并分类<br>自测SOCKS4, SOCKS5单独无法检测，是个BUG<br>只能通过AUTO模式检测SOCKS4,5代理</p><h3 id="使用截图"><a href="#使用截图" class="headerlink" title="使用截图"></a>使用截图</h3><div class="justified-gallery"><img src = 'https://img.ghzl.fun/imgs/2020/04/12dd46670ddd9f95.png' /><img src = 'https://img.ghzl.fun/imgs/2020/04/56bc0ee8592ebb64.png' /><img src = 'https://img.ghzl.fun/imgs/2020/04/2d617a936fda36de.png' /><img src = 'https://img.ghzl.fun/imgs/2020/04/e756772780315a47.png' /></div><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol><li>双击<code>run.bat</code></li><li>在跳出的窗口中选择你存放代理的文件夹</li><li>选择线程数量和超时时间，自测(800线程，10超时)</li><li>享受你的检查之旅吧！！！！！！</li></ol><h3 id="使用条款"><a href="#使用条款" class="headerlink" title="使用条款"></a>使用条款</h3><p>1.当你下载此软件时，你便已默认此条款<br>2.请勿使用本软件做出违法，破坏社会治安等具有危害性的行为<br>3.请勿试图通过此软件伪造IP地址进行违法等行为<br>4.如造成他人损失，本站一概不负责任，不承担所有因为你使用此软件造成他人的损失<br>5.此软件已经过站长亲自确认，无毒，无害，无后门<br>6.此软件仅供测试使用！请在下载24小时后自觉删除此软件<br>7.如有任何使用上的问题可以在下方留言评论</p><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a class="button is-success" target="_blank" href="https://blog.ghzl.fun/go/HypixelCheck/">蓝奏云（√推荐）</a></p><h3 id="编写作者"><a href="#编写作者" class="headerlink" title="编写作者"></a>编写作者</h3><article class="message is-success">  <div class="message-body">    <strong>ProxyChecker by Nesfan</strong></br>    Discord: Nesfan#2877  </div></article>]]></content>
+    
+    <summary type="html">
+    
+      高速多线程检测代理工具 支持多种类型的代理 不会漏测
+    
+    </summary>
+    
+    
+    
+      <category term="工具" scheme="https://www.ghzlmc.ml/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>[源码] 我的世界HypixelChecker</title>
