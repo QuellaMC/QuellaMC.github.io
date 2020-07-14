@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ghzlmc.ml/"/>
-  <updated>2020-07-13T12:02:33.719Z</updated>
+  <updated>2020-07-14T01:58:54.894Z</updated>
   <id>https://www.ghzlmc.ml/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[教程] 在Kali上使用破解版Burpsuite</title>
+    <link href="https://www.ghzlmc.ml/2020/07/14/%E6%95%99%E7%A8%8B-%E5%9C%A8Kali%E4%B8%8A%E4%BD%BF%E7%94%A8%E7%A0%B4%E8%A7%A3%E7%89%88Burpsuite/"/>
+    <id>https://www.ghzlmc.ml/2020/07/14/%E6%95%99%E7%A8%8B-%E5%9C%A8Kali%E4%B8%8A%E4%BD%BF%E7%94%A8%E7%A0%B4%E8%A7%A3%E7%89%88Burpsuite/</id>
+    <published>2020-07-14T01:47:58.000Z</published>
+    <updated>2020-07-14T01:58:54.894Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>我其实也是觉得很奇怪，最近想玩HTB便用VM建了个Kali系统。<br>我打开之后发现Burpsuite是社区版，我要用的功能是付费的，<br>我也是有点头疼，查阅资料后便下载了2020的破解版。<br>我放到Kali之后发现说<code>-Xbootclasspath/p:</code>在JDK11中不支持？<br>我看着多半是版本问题，便百度查询了一下。安装java8。<br>装了5次，都是不行，我看着心态没了，后来我不断尝试。<br>发现尴尬的一点：我这是openjdk不是java。。。<br>果断卸载openjdk11即可。。。。。。</p><h3 id="教程内容"><a href="#教程内容" class="headerlink" title="教程内容"></a>教程内容</h3><p>1.卸载<code>openjdk-11</code>：<br>输入以下指令，等待完成即可！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove openjdk-11-jre</span><br><span class="line">sudo apt-get remove openjdk-11-jre-headless</span><br></pre></td></tr></table></figure><p>2.破解Burpsuite步骤1：<br>先运行<code>burp-loader-keygen.jar</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar burp-loader-keygen.jar</span><br></pre></td></tr></table></figure><p>看到如下图示即可</p><div class="justified-gallery"><img src = 'https://img.ghzl.fun/imgs/2020/04/6f8cec9e0ffc3891.png' /></div>3.破解Burpsuite步骤2：我不知道为什么我用软件里的run运行不成功。。我是把指令复制到bash里运行的。。。。。。。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -noverify -Xbootclasspath/p:burp-loader-keygen.jar -jar burpsuite_pro_v2020.2.jar</span><br></pre></td></tr></table></figure>4.破解Burpsuite步骤3：复制上图License里面的key，粘贴key，点击next：<div class="justified-gallery"><img src = 'https://img.ghzl.fun/imgs/2020/04/68d891e71b4ca384.png' /></div>5.破解Burpsuite步骤4：点击Manual activation,复制上图中的ruquest，直接点击copy request，回到刚刚的jar工具中，将复制的request粘贴到Activation Request，粘贴后立即得到Activation Response，复制response，回到burpsuite界面,输入到最下面的框中。点击next=>finish即可激活<div class="justified-gallery"><img src = 'https://img.ghzl.fun/imgs/2020/04/d38fd80dcf5344e4.png' /><img src = 'https://img.ghzl.fun/imgs/2020/04/cbb48fe31b77c1d3.png' /><img src = 'https://img.ghzl.fun/imgs/2020/04/48410cce94c86c10.png' /><img src = 'https://img.ghzl.fun/imgs/2020/04/40cea7a645122096.png' /></div>6.破解Burpsuite步骤5-大功告成：破解成功后每次运行burpsuite均使用此指令即可！不用打开key_loader：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -noverify -Xbootclasspath/p:burp-loader-keygen.jar -jar burpsuite_pro_v2020.2.jar</span><br></pre></td></tr></table></figure><h3 id="使用条款"><a href="#使用条款" class="headerlink" title="使用条款"></a>使用条款</h3><p>1.当你下载此软件时，你便已默认此条款<br>2.请勿使用本软件做出违法，破坏社会治安等具有危害性的行为<br>3.如造成他人损失，本站一概不负责任，不承担所有因为你使用此软件造成他人的损失<br>4.此软件已经过站长亲自确认，无毒，无害，无后门<br>5.请支持正版<a href="https://portswigger.net/burp/" title="Burpsuite">Burpsuite</a><br>6.此软件仅供测试使用！请在下载24小时后自觉删除此软件<br>7.如有任何使用上的问题可以在下方留言评论</p><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><strong>原作者：<a href="https://github.com/binjoo/WeChatHelper" title="PortSwigger">PortSwigger</a></strong><br><a href="https://blog.ghzl.fun/go/bpc/" title="下载2">GitHub（√推荐）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;我其实也是觉得很奇怪，最近想玩HTB便用VM建了个Kali系统。&lt;br&gt;我打开之后发现Burpsuite是社区版，我要用的功能是付费的，&lt;b
+      
+    
+    </summary>
+    
+    
+    
+      <category term="教程" scheme="https://www.ghzlmc.ml/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>[Typecho插件]WechatHelper微信公众号关联</title>
